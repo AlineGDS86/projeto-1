@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title:  Center(child: Text('Game Quimica Orgânica')),
+          title:  const Center(child: Text('Game Quimica Orgânica')),
         ),
         body: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -25,13 +25,14 @@ class HomePage extends StatelessWidget {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
+                        // ignore: avoid_print
                         print ('Pressionado');
                         Navigator.pushNamed(context, 'Quiz');
                       },
-                      child: Text('Jogar', style: TextStyle(fontSize: 30),),
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
+                        padding: const EdgeInsets.fromLTRB(50, 10, 50, 10),
                       ),
+                      child: const Text('Jogar', style: TextStyle(fontSize: 30),),
                     ),
                   ),
                 ],
